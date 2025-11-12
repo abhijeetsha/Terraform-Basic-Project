@@ -16,9 +16,12 @@
 * }
   * terraform init ----> For initializing terraform
 ### Check In Path is ".terraform/providers/registry.terraform.io/hashicorp/"
-## Terrform Mian Command Is
+## Terrform Mian Files & Main Command Is
 ### Write file in .tf Extension And After That Run Command
-  * terraform init
+### 1. provider.tf ----->
+### 2. main.tf -----> like main-s3.tf, main-ec2.tf, main-vpc.tf
+### 3. variables.tf -----> you can change value from variable file
+### 4. outputs.tf -----> you can see output on your terminals
   * terraform plan
   * terraform apply
   * terraform destroy
