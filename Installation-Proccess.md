@@ -82,3 +82,20 @@
    * for key, instance in aws_instance.my_instance : key => instance.public_ip
   * }
 * }
+
+## Conditional Expressions:- (if_else (cinditions))
+### Create on variable.tf syntax is:-
+* Add this line in file
+* # Enviroment Variable
+* variable "env" {
+  * default = "dev"
+  * type = string
+* }
+### Changes in maine-ec2.tf
+* Add this syntax in one line:-
+* root_block_device {
+    * volume_size = var.env == "prd" ? 20 : var.ec2_default_root_storage_size
+    * volume_type = "gp3"
+  * }
+
+  
