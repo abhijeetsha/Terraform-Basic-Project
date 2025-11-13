@@ -25,3 +25,60 @@
   * terraform plan
   * terraform apply
   * terraform destroy -auto-approve
+## Dyanamics Block (For_each, Count)
+### 1. Count syntex is 
+### In main-ec2.tf file
+ * # EC2 Instance
+   * resource "aws_instance" "my_instance" {
+     * count = 2 # meta argumrnt
+     * ami             = var.ec2_ami_id
+     * instance_type   = var.ec2_instance_type
+     * Remembered This: Used Of "count = 2"
+ ### NOTE:- This syntax is Used for multiple instances, multiple vpc, s3-bucket and lost of things in AWS.
+
+### In outputs.tf file changes in is
+ * output "ec2_public_ip" {
+   * value = aws_instance.my_instance[*].public_ip
+   * }
+* Remembered This:- Used of hastrics [*]
+
+### 2. for_each Syntax is
+* resource "azurerm_resource_group" "rg" {
+  * for_each = tomap({
+    * a_group       = "eastus"
+    * another_group = "westus2"
+  * })
+  * name     = each.key
+  * location = each.value
+* }
+### NOTE: This syntax is used for changing name of instances.
+
+### Used Example:
+### Changes in main-ec2.tf
+# EC2 Instance
+* resource "aws_instance" "my_instance" {
+  * for_each = tomap({
+    * terraform-automate-micro="t2.micro"
+    * terraform-automate-medium="t2.medium"
+* }) # meta arguments
+  * ami             = var.ec2_ami_id
+  * instance_type   = each.value
+  * key_name        = aws_key_pair.my_key.key_name
+  * vpc_security_group_ids = [aws_security_group.my_security_group.id]
+
+  * root_block_device {
+    * volume_size = var.ec2_root_storage_size
+    * volume_type = "gp3"
+  * }
+
+  * tags = {
+    * Name = each.key
+  * }
+* }
+
+### Chnages in outputs.tf syntax is
+* output "ec2_public_ip" {
+ * value = {
+   * for key, instance in aws_instance.my_instance : key => instance.public_ip
+  * }
+* }
