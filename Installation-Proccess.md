@@ -86,7 +86,7 @@
 ## Conditional Expressions:- (if_else (cinditions))
 ### Create on variable.tf syntax is:-
 * Add this line in file
-* # Enviroment Variable
+* Enviroment Variable
 * variable "env" {
   * default = "dev"
   * type = string
