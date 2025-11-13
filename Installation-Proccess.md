@@ -24,4 +24,4 @@
 ### 4. outputs.tf -----> you can see output on your terminals
   * terraform plan
   * terraform apply
-  * terraform destroy
+  * terraform destroy -auto-approve
