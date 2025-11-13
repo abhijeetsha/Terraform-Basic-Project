@@ -98,4 +98,10 @@
     * volume_type = "gp3"
   * }
 
-  
+ ## Terraform State Management & Backends
+ ### 1. Role Of State In Infrastructure Mangement
+ ### 2. Secure State Mangement Best Practices.
+ ### 3. Remote State Backends
+   * AWS S3 for Remote Storages
+   * State Locking With DyanamoDB
+ 
