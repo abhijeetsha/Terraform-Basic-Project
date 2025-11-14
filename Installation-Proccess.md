@@ -117,6 +117,18 @@
     * terraform state list
  ### 2. Secure State Mangement Best Practices.
  ### 3. Remote State Backends
+   * mkdir terra-remote && cd terra-remote
    * AWS S3 for Remote Storages
-   * State Locking With DyanamoDB
+     * sudo vim terrafrom.tf ---> ( add aws provider )
+     * sudo vim providers.tf ---> ( aws-provider)
+     * sudo vim main-s3.tf ---> ( add syntax of s3-buckets )
+   * State Locking With DynamoDB
+     * sudo vim dynamodb.tf --- ( add syntax of dynamodb )
+     * Go to terraform-project & delete terraform.tfstate & rename of terraform.tfstate.backup to terraform.tfstate
+     * now run command is:
+     * $ terraform state list
+     * $ terraform init
+     * $ terraform apply
+      * now you get backup state file again.
+     
  
