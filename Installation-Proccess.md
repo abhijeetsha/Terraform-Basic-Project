@@ -100,6 +100,21 @@
 
  ## Terraform State Management & Backends
  ### 1. Role Of State In Infrastructure Mangement
+   * go to aws and stop one server and come to terminal and type command
+   * terraform refresh  ---> refreshing your state after that go to terraform,tfstate file you can see your results.
+   * terraform state list
+   * terraform state show <name-of-state>
+   * terraform state rm <name-of-state>
+   * terraform import aws_key_pair.my_key <KEY_NAME>
+   * Recovery your key_pair
+   * edit main-ec2.tf
+   * resource "aws_instance" "my_new_instance" {
+      * ami = "unknown"
+      * instance_type = "unknown"
+ * }
+    * terraform import aws_instance.my_new_instance <instance_id>
+    * now you have added your aws instance in your terraform.tfstate file you can show in
+    * terraform state list
  ### 2. Secure State Mangement Best Practices.
  ### 3. Remote State Backends
    * AWS S3 for Remote Storages
