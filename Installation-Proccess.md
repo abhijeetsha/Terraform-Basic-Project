@@ -130,5 +130,17 @@
      * $ terraform init
      * $ terraform apply
       * now you get backup state file again.
+    ### Note:- you have already backup-file thats why you save/safe your .tfstate file is ok.
+    ### Note:- But you remove both file or dont have both file after that what you will have to do for this.
+### Go to Provider file like terraform.tf and add this syntax line. this is add in main-ec2.tf becoz of we have to save this state file
+* backend "s3" {
+  * bucket = "terraboin-ex"
+  * key = "terraform.tfstate"
+  * region = "us-east-1"
+  * dynamodb_table = "dynamodb-terra-table"
+* }
+### terraform init
+
+
      
  
