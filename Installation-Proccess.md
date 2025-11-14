@@ -140,6 +140,12 @@
   * dynamodb_table = "dynamodb-terra-table"
 * }
 ### terraform init
+  * you got locking error then you can rum migrate commands.
+### terraform init -migrate-state
+### terraform init -reconfigure
+### terraform apply -auto-approve -lock=false
+  * Now you can you see in your buckets "terraform.tfstate" file is present
+
 
 
      
