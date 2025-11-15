@@ -148,8 +148,16 @@
 
 ## Terraform Workspaces And Enviroment Managements
 ### What are the workspaces..?
-* Ans: 
+### Ans: 
+* A workspace allows you to run the same Terraform code for different environments (like dev, test, prod) without creating separate folders or duplicating code.
+* Each workspace has its own state file, so resources created in dev won’t affect resources in prod.
+
 ### Managing Multiple Enviroments (Dev,Stagging & Prod)
+### 📝 Important Points
+  * Workspaces do NOT automatically separate variables.
+  * Workspaces only separate state, not code.
+  * For large infrastructures, using separate directories or separate repos may be better than workspaces.
+
 ### Creating & Swtiching Workspaces Command Is:-
    * terraform workspace list ---> list of workspace
    * terraform workspace new <new_name> ---> creating new workspace
