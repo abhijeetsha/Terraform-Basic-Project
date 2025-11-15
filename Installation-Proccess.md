@@ -146,6 +146,17 @@
 ### terraform apply -auto-approve -lock=false
   * Now you can you see in your buckets "terraform.tfstate" file is present
 
+## Terraform Workspaces And Enviroment Managements
+### What are the workspaces..?
+
+### Managing Multiple Enviroments (Dev,Stagging & Prod)
+### Creating & Swtiching Workspaces Command Is:-
+   * terraform workspace list ---> list of workspace
+   * terraform workspace new <new_name> ---> creating new workspace
+   * terraform workspace select <wsp_name> ---> switching the workspaces
+   * terraform workspace show  ---> show your current workspace
+   * terraform workspace delete <wsp_name> ---> delete your workspaces
+
 
 
      
