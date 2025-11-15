@@ -166,8 +166,13 @@
    * terraform workspace delete <wsp_name> ---> delete your workspaces
 ### NOte: you have to practice on this workspaces 
 
-
-
+## Terraform Modules - Reusability & Best Practices.
+### What are modules:-
+   * modules is reusable block of source & using which you used source whatever you want with variables.
+* using prebuilt modules from terraform registry
+* Creating Custom Modules
+* Module Structure, Best Practices And Outputs.
+### Create VPC with the help of modules.
 
      
  
