@@ -148,7 +148,7 @@
 
 ## Terraform Workspaces And Enviroment Managements
 ### What are the workspaces..?
-
+* Ans: 
 ### Managing Multiple Enviroments (Dev,Stagging & Prod)
 ### Creating & Swtiching Workspaces Command Is:-
    * terraform workspace list ---> list of workspace
@@ -156,6 +156,8 @@
    * terraform workspace select <wsp_name> ---> switching the workspaces
    * terraform workspace show  ---> show your current workspace
    * terraform workspace delete <wsp_name> ---> delete your workspaces
+### NOte: you have to practice on this workspaces 
+
 
 
 
