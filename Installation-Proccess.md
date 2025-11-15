@@ -75,7 +75,7 @@
     * Name = each.key
   * }
 * }
-
+### NOte: changes in "instance type" & "name"
 ### Chnages in outputs.tf syntax is
 * output "ec2_public_ip" {
  * value = {
